@@ -1,0 +1,563 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+::-webkit-scrollbar {
+    display: none; /*chrome*/
+  }
+
+  .bg{
+    background: #A89D63;
+  }
+  /* header */
+.header{
+    width: 100%;
+    padding: 12px 24px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);   
+    position: fixed;
+    border-bottom: 2px solid black;
+    top: 0;
+    z-index: 1;
+    width: 100%
+}
+
+.logo{
+    width: 100%;
+    height: 75px;
+}
+
+
+
+.about{
+    font-size: 27px;
+}
+
+.name{
+    margin-left: 15px;
+    font-family: 'Koulen', cursive;
+    letter-spacing: 7px;
+}
+
+.containerMenu {
+    cursor: pointer;
+    width: 20%;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 100px;
+    height: 6px;
+    background-color: #333;
+    margin: 10px 0;
+    transition: 0.4s;
+    margin-left: auto;
+}
+
+
+/* оверлей навигация */
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    text-transform: uppercase;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+/* content */
+
+.intro{
+    height: 300px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro p{
+    text-transform: uppercase;
+    font-size: 60px;
+    font-weight: 400;
+    text-align: center;
+    color: white;
+}
+
+.intro1{
+    position: relative;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 70px;
+}
+/*slider*/
+
+.imgSlider{
+    width: 100%;
+}
+.slider {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+height: 100%;
+}
+
+.slidesButtonL {
+    cursor: pointer;
+    width: 52px;
+    height: 52px;
+    border-radius: 50px;
+    background: #d9d9d9;
+}
+
+.slidesButtonR {
+    cursor: pointer;
+    width: 52px;
+    height: 52px;
+    border-radius: 50px;
+    background: #d9d9d9;
+}
+
+.mySlides {
+    width: 100%;
+    height: 229px;
+    background: #d9d9d9;
+    border-radius: 50px;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.dotBox {
+    padding-top: 5px;
+    text-align: center;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #d9d9d9;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #9d9d9d;
+}
+
+/* more content */
+.intro2{
+    margin-top:500px;
+}
+
+.introLogoContainer{
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) -48.53%, #A89D63 60.39%);
+}
+
+.introLogo{
+    width: 80%;
+}
+
+.contentBlock{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center
+}
+
+.paimon{
+max-width: 220px;
+max-height: 250px;
+}
+
+.introTxtBox{
+    width: 60%;
+    height: 200px;
+    background-color:#D9D9D9;
+}
+
+.weaponsBlock{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.weaponContainer{
+    width: 80%;
+    background: rgba(217, 217, 217, 0.5);
+}
+
+.row{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 35px;
+}
+.buttonMoreNews{
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    background: none;
+}
+
+.showMore {
+    font-weight: 500;
+    font-size: 20px;
+    border-width: 0px;
+    background-color: transparent;
+}
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 400;
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.9); 
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
+/* footer */
+.contacts{
+    width: 100%;
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+.contacts a:hover{
+    color: #000000;
+    transition: all .5s ease 0s;
+}
+
+.leftBar{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 300px;
+    padding: 40px 40px;
+    justify-content: space-around;
+}
+
+.leftBar a{
+    text-decoration: none;
+    margin-bottom: 20px;
+    color: #818181;
+    text-transform: uppercase;
+}
+
+.rightBar{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 300px;
+    padding: 40px 40px;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.rightBar a{
+    text-decoration: none;
+    color: #818181;
+    text-transform: uppercase;
+}
+
+.footerLogo{
+    height: 250px;
+    width: 250px;
+}
+
+
+/* изменение ширины браузера */
+@media screen and (max-width: 900px) {
+    .intro{
+        margin-top: 100px;
+        height: 175px;
+        width: 100%;
+        border-bottom: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .intro p{
+        text-transform: uppercase;
+        font-size: 45px;
+        font-weight: 400;
+        text-align: center;
+        color: white;
+    }
+    
+    .header p{
+        color: white;
+        user-select: none;
+    }
+    .header h1{
+        z-index: 2;
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+    .slider{
+        width: 350px;
+        height: 350px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+    }
+    .img700{
+        width: 350px;
+        height: 350px;
+    }
+    .imgLine{
+        height: 100%;
+        display: flex;
+        position: relative;
+        left: 0;
+        transition: all 1s ease 0s;
+    }
+    .intro1{
+        width: 450px;
+        height: 350px;
+        color: white;
+        background-color: rgba(255, 255, 255, 0.708);
+        text-transform: uppercase;
+        padding: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: relative;
+        top: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .leftBar a{
+        text-decoration: none;
+        margin-bottom: 10px;
+        color: #818181;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .rightBar a{
+        text-decoration: none;
+        color: #818181;
+        text-transform: uppercase;
+        font-size: 10px;
+        font-weight: 500;
+    }
+    
+    .footerLogo{
+        height: 150px;
+        width: 150px;
+    }
+
+    .process{
+        height: 157px;
+        width: 240px;
+    }
+    .content{
+        margin-top: 40px;
+        height: 350px;
+        width: 100%;
+        display: flex;
+    }
+    .contentTxt p{
+        color: white;
+        text-transform: uppercase;
+        font-size: 19px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .process{
+        height: 240px;
+        width: 360px;
+    }
+    .content{
+        margin-top: 40px;
+        height: 500px;
+        width: 100%;
+        display: flex;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .process{
+        height: 120px;
+        width: 180px;
+    }
+    .content{
+        margin-top: 40px;
+        height: 200px;
+        width: 100%;
+        display: flex;
+    }
+    .contentTxt p{
+        color: white;
+        text-transform: uppercase;
+        font-size: 15px;
+    }
+    .logo{
+        width: 50px;
+        height: 50px;
+    }
+
+    .about{
+        color: white;
+        z-index: -1;
+    }
+}
